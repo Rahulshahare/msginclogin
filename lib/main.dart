@@ -39,6 +39,11 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
           ],
         ),
       ),
