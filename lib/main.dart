@@ -34,7 +34,8 @@ class LoginPage extends StatelessWidget {
               child: Center(
                 child: Container(
                   width: 90,
-                  child: Image.asset('og_logo.png'),
+                  padding: EdgeInsets.all(10),
+                  child: Image.asset('images/og_logo.png'),
                 ),
               ),
             ),
