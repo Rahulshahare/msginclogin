@@ -22,9 +22,24 @@ class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('Msginc'),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Center(
+                child: Container(
+                  width: 90,
+                  child: Image.asset('og_logo.png'),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
