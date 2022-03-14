@@ -41,12 +41,20 @@ class LoginPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 30, bottom: 30, left: 15, right: 15),
+                  top: 30, bottom: 20, left: 15, right: 15),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  hintText: 'earth@galexy.com',
+                  border: OutlineInputBorder(),
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 10, bottom: 30, left: 15, right: 15),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: 'Password', border: OutlineInputBorder()),
               ),
             ),
           ],
