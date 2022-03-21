@@ -22,8 +22,8 @@ class Msginc extends StatelessWidget {
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
 
-  final emailCont = TextEditingController();
-  final passCont = TextEditingController();
+  final TextEditingController emailCont = TextEditingController();
+  final TextEditingController passCont = TextEditingController();
 
   //@override
   void dispose() {
