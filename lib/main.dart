@@ -20,7 +20,18 @@ class Msginc extends StatelessWidget {
 }
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  LoginPage({Key? key}) : super(key: key);
+
+  final emailCont = TextEditingController();
+  final passCont = TextEditingController();
+
+  //@override
+  void dispose() {
+    emailCont.dispose();
+    passCont.dispose();
+    //super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +55,7 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.only(
                   top: 30, bottom: 20, left: 15, right: 15),
               child: TextField(
+                controller: emailCont,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(),
@@ -54,6 +66,8 @@ class LoginPage extends StatelessWidget {
               padding: const EdgeInsets.only(
                   top: 10, bottom: 30, left: 15, right: 15),
               child: TextField(
+                controller: passCont,
+                obscureText: true,
                 decoration: InputDecoration(
                     labelText: 'Password', border: OutlineInputBorder()),
               ),
@@ -69,6 +83,9 @@ class LoginPage extends StatelessWidget {
               child: TextButton(
                 onPressed: () {
                   //TODO ON LOGIN
+
+                  print(
+                      "Email is ${emailCont.text} and Password is ${passCont.text}");
                 },
                 child: const Text(
                   'Login',
